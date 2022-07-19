@@ -10,3 +10,7 @@
 docker ps
 #how to check docker images
 docker images
+
+########without --detach 
+ docker container run --publish 83:80 nginx
+
