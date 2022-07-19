@@ -1,0 +1,5 @@
+#####docker starting command####
+17  docker container run --publish 80:80 --detach nginx
+   18  docker ps
+   19  docker container run --publish 81:80 --detach httpd
+   20  docker ps
