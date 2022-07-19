@@ -8,3 +8,5 @@
    #########docker command to deploy container with custom hostname
    docker container run --publish 82:80 --detach --name webhost nginx
 docker ps
+#how to check docker images
+docker images
