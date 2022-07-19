@@ -3,3 +3,8 @@
    18  docker ps
    19  docker container run --publish 81:80 --detach httpd
    20  docker ps
+   
+   
+   #########docker command to deploy container with custom hostname
+   docker container run --publish 82:80 --detach --name webhost nginx
+docker ps
