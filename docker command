@@ -13,4 +13,8 @@ docker images
 
 ########without --detach 
  docker container run --publish 83:80 nginx
+ 
+ ###how to check running and stopped container
+ docker ps
+ docker ps -a
 
