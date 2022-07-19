@@ -20,3 +20,9 @@ docker images
 ####how to check the logs of a container
  32  docker ps
    33  docker logs webhost
+####how to delete or forcefully delete your container
+  37  docker ps
+   38  docker rm 7f1
+   39  docker stop 7f1
+   40  docker ps
+   41  docker rm 396 --force
