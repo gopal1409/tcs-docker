@@ -17,4 +17,6 @@ docker images
  ###how to check running and stopped container
  docker ps
  docker ps -a
-
+####how to check the logs of a container
+ 32  docker ps
+   33  docker logs webhost
