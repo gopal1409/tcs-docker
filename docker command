@@ -30,3 +30,6 @@ docker images
  48  docker top mongo
    49  ps aux
    50  docker top mongo
+   #monitor your docker cointainer
+     55  docker container stats
+
