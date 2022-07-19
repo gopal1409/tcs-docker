@@ -26,3 +26,7 @@ docker images
    39  docker stop 7f1
    40  docker ps
    41  docker rm 396 --force
+#####container vs vm container are running as process
+ 48  docker top mongo
+   49  ps aux
+   50  docker top mongo
