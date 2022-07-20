@@ -5,3 +5,16 @@
 ####docker networking
  70  docker network ls
    71  docker network inspect bridge
+   
+   ########docker netowrking
+   64  docker run  -d nginx
+70  docker network ls
+   71  docker network inspect bridge
+  
+   74  docker ps
+   75  docker run -d nginx
+   76  docker ps
+   77  docker network ls
+   78  docker network inspect bridge
+   79  docker run -p 88:80 -d nginx
+
