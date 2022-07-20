@@ -1,0 +1,4 @@
+####how to login inside a container
+  64  docker run -p 88:80 -d nginx
+   65  docker ps
+   66  docker exec -it 429ea9c46878 /bin/bash
