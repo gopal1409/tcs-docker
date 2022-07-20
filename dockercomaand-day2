@@ -2,3 +2,6 @@
   64  docker run -p 88:80 -d nginx
    65  docker ps
    66  docker exec -it 429ea9c46878 /bin/bash
+####docker networking
+ 70  docker network ls
+   71  docker network inspect bridge
