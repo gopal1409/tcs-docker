@@ -1,0 +1,11 @@
+#container to container communicAtion using dns
+ 88  docker network ls
+   89  docker network create my_app_net
+   90  docker network ls
+   91  docker inspect network my_app_net
+   92  docker container run -d --name frontend --network my_app_net nginx:alpine
+   93  docker container run -d --name backend --network my_app_net nginx:alpine
+   94  docker network ls
+   95  docker network inspect my_app_net
+   96  docker exec -it frontend ping backend
+   97  docker exec -it backend ping frontend
