@@ -15,4 +15,17 @@
   106  docker ps
   107  docker volume ls
   108  docker volume inspect mysqldb
+###docker reattach storage
+ 137  docker container run -d --name db -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysqldb:/var/lib/mysql mysql
+  138  docker rm db --force
+  139  docker volume rm mysqldb
+  140  docker container run -d --name db -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysqldb:/var/lib/mysql mysql:8.0.29
+  141  docker ps
+  142  docker volume ls
+  143  docker stop db
+  144  docker rm db
+  145  docker volume ls
+  146  docker container run -d --name db -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysqldb:/var/lib/mysql mysql:8.0
+  147  docker ps
+  148  docker container inspect db
 
