@@ -17,4 +17,9 @@
    77  docker network ls
    78  docker network inspect bridge
    79  docker run -p 88:80 -d nginx
+####docker volume
+ 105  docker container run -d --name db -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysqldb:/var/lib/mysql mysql
+  106  docker ps
+  107  docker volume ls
+  108  docker volume inspect mysqldb
 
