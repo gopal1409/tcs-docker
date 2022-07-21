@@ -9,3 +9,10 @@
    95  docker network inspect my_app_net
    96  docker exec -it frontend ping backend
    97  docker exec -it backend ping frontend
+   
+   #docker volume
+    105  docker container run -d --name db -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysqldb:/var/lib/mysql mysql
+  106  docker ps
+  107  docker volume ls
+  108  docker volume inspect mysqldb
+
