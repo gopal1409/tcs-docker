@@ -1,0 +1,10 @@
+156  git clone https://github.com/gopal1409/springboot-chat-app.git
+  157  cd springboot-chat-app/
+  158  apt install defaul-jdk
+  159  apt install default-jdk
+  160  apt install maven
+  161  mvn clean package
+  162  ls
+  163  cd target/
+  164  ls
+  165  cd ..
