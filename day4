@@ -8,3 +8,19 @@
   163  cd target/
   164  ls
   165  cd ..
+###convert into an container image. 
+ 169  vi dockerfile
+#####inside the docker file provide this instruction
+FROM openjdk:16-alpine3.13
+MAINTAINER John Cena<john@gmail.com>
+VOLUME /tmp
+EXPOSE 8080
+ARG JAR_FILE=target/websocket-demo-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} websocket-demo.jar
+ENTRYPOINT ["java","-jar","websocket-demo.jar"]
+
+
+######### then build the image
+178  docker build -t chatapp .
+  179  docker images
+  180  docker container run -d -p 80:8080 chatapp
