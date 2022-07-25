@@ -56,3 +56,9 @@ EOF
    23  sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
    24  sudo apt-get update
    25  sudo apt-get install -y kubelet kubeadm kubectl
+   
+   #in master only run this
+    mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
