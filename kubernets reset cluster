@@ -1,0 +1,3 @@
+ 79  kubeadm reset
+   80  rm -rf /etc/cni/net.d
+   81  rm -rf $HOME/.kube/config
