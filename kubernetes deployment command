@@ -10,3 +10,10 @@
   139  kubectl get pod
   140  kubectl delete pod my-first-deployment-6bcd66bc7c-4fknk
   141  kubectl get pod
+#####expose app outisde k8s cluster
+  148  git pull
+  149  kubectl apply -f deploysrc.yml
+  150  kubectl get svc
+  151  kubectl describe svc deployment-srv
+
+  153  kubectl get pod -o wide
