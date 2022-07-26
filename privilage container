@@ -5,3 +5,14 @@ id
 touch testfile
 ls -lh 
 exit
+###pod with user auth
+ 364  git pull
+ 358  kubectl -f pod.yml delete --force --grace-period 0
+ 359  kubectl -f pod.yml create
+  360  kubectl get pod
+  361  kubectl exec -it pod -- sh
+id
+touch testfile
+cd /tmp
+touch testfile
+exit
