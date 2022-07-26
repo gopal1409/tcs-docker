@@ -11,4 +11,12 @@
   262  apt-mark unhold kubeadm
   263  kubeadm version
   264  kubeadm upgrade plan
+  #re insitalized the master node back
+   266  apt-mark unhold kubelet kubectl
+  267  service kubelet restart
+  268  service kubelet status
+  269  kubeadm upgrade plan
+  270  kubectl get nodes
+  271  kubectl uncordon ip-172-31-14-114
+  272  kubectl get nodes
 
