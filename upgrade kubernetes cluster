@@ -19,4 +19,20 @@
   270  kubectl get nodes
   271  kubectl uncordon ip-172-31-14-114
   272  kubectl get nodes
+  
+  #########upgrade the worker node
+  279  kubectl drain ip-172-31-8-112
+  280  kubectl drain ip-172-31-8-112 --ignore-daemonsets
+  281  kubectl drain ip-172-31-8-112 --ignore-daemonsets --delete-emptydir-data
+  282  apt-get update
+  283  apt-cache show kubeadm | grep 1.24.3
+  284  apt-mark hold kubelet kubectl
+  285  apt mark unhold kubeadm
+  286  apt-mark unhold kubeadm
+  287  kubeadm upgrade node
+  288  apt-mark unhold kubelet kubectl
+  289  service kubelet restart
+  290  kubectl get nodes
+  291  kubectl uncordon ip-172-31-8-112
+
 
