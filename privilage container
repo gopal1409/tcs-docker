@@ -1,0 +1,7 @@
+ 348  kubectl run pod --image=busybox --command -o yaml --dry-run=client > pod.yml -- sh -c 'sleep 1d'
+  351  kubectl -f pod.yml create
+ 354  kubectl exec -it pod -- sh
+id
+touch testfile
+ls -lh 
+exit
