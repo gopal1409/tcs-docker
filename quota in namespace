@@ -2,7 +2,6 @@
   307  git pull
    
 310  kubectl apply -f namespacerq.yaml --namespace=dev
-kubectl run my-first-pod --image nginx --namespace=dev
   311  kubectl describe ns dev
 kubectl get pod -n dev
 ###deploy 
