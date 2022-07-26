@@ -26,6 +26,7 @@
   
   ####roll back to previous release
   176  kubectl get deploy
+  ###in prod we deploy a wrong image. it will always faile we need to roll back to previous release
   177  kubectl set image deploy my-first-deployment myapp3-container=nginx:1.161
   178  kubectl get deploy
   179  kubectl get rs
