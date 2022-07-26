@@ -31,6 +31,8 @@
   285  apt mark unhold kubeadm
   286  apt-mark unhold kubeadm
   287  kubeadm upgrade node
+  ####if there is new package avaialbe
+  (apt-get update kubelet:1.24.5)
   288  apt-mark unhold kubelet kubectl
   289  service kubelet restart
   #####till here run on worker
