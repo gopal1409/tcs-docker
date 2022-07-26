@@ -1,0 +1,6 @@
+ 295  kubectl create ns dev
+  296  kubectl get ns
+  297  history
+  298  kubetl get ns
+  299  kubectl get ns
+  300  kubectl get pod --namespace=dev
