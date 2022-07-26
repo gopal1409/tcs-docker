@@ -1,0 +1,6 @@
+ 125  git clone https://github.com/gopal1409/tcs-deployment.git
+  126  cd tcs-deployment/
+  129  kubectl apply -f deploy.yml
+  130  kubectl get deploy
+  131  kubectl get rs
+  132  kubectl get pod
