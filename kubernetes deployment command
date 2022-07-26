@@ -23,3 +23,20 @@
   159  kubectl get deploy
   160  kubectl get rs
   161  kubectl get pod -o wide
+  
+  ####roll back to previous release
+  176  kubectl get deploy
+  177  kubectl set image deploy my-first-deployment myapp3-container=nginx:1.161
+  178  kubectl get deploy
+  179  kubectl get rs
+  180  kubectl get pod
+  181  kubectl rollout status deploy my-first-deployment
+  182  kubectl describe deploy my-first-deployment
+  
+  184  kubectl rollout history deploy my-first-deployment
+  185  kubectl rollout history deploy my-first-deployment --revision=2
+  186  kubectl rollout undo deploy my-first-deployment
+  187  kubectl get deploy
+  188  kubectl rollout undo deploy my-first-deployment --to-revision=1
+  189  kubectl describe deploy my-first-deployment
+
