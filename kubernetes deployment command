@@ -39,4 +39,9 @@
   187  kubectl get deploy
   188  kubectl rollout undo deploy my-first-deployment --to-revision=1
   189  kubectl describe deploy my-first-deployment
+  
+  #asutoscaling k8s cluster
+    207  kubectl autoscale deploy my-first-deployment --min=2 --max=4 --cpu-percent=80
+  208  kubectl get hpa
+
 
