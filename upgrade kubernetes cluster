@@ -17,6 +17,8 @@
   268  service kubelet status
   269  kubeadm upgrade plan
   270  kubectl get nodes
+  ####if there is an update in kubectl
+  apt-get update kubectl 
   271  kubectl uncordon ip-172-31-14-114
   272  kubectl get nodes
   
