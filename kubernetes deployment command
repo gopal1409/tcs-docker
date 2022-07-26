@@ -4,3 +4,9 @@
   130  kubectl get deploy
   131  kubectl get rs
   132  kubectl get pod
+######delete a pod
+ 137  kubectl get deploy
+  138  kubectl get rs
+  139  kubectl get pod
+  140  kubectl delete pod my-first-deployment-6bcd66bc7c-4fknk
+  141  kubectl get pod
