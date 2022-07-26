@@ -1,0 +1,5 @@
+ 252  kubectl get nodes
+  253  kubectl drain ip-172-31-14-114
+
+  255  kubectl drain ip-172-31-14-114 --ignore-daemonsets
+  256  kubectl get nodes
