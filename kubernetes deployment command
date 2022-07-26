@@ -17,3 +17,9 @@
   151  kubectl describe svc deployment-srv
 
   153  kubectl get pod -o wide
+#######updat the image
+ 157  kubectl get deploy
+  158  kubectl set image deploy my-first-deployment myapp3-container=piuma/phpsysinfo
+  159  kubectl get deploy
+  160  kubectl get rs
+  161  kubectl get pod -o wide
