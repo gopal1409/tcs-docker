@@ -5,3 +5,11 @@
 kubectl run my-first-pod --image nginx --namespace=dev
   311  kubectl describe ns dev
 kubectl get pod -n dev
+###deploy 
+ 320  kubectl describe ns dev
+  321  git pull
+  322  kubectl apply -f deploy1.yml --namespace=dev
+  323  kubectl describe ns
+327  kubectl apply -f deploy2.yml --namespace=dev
+ 320  kubectl describe ns dev
+
