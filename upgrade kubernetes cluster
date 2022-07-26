@@ -1,5 +1,14 @@
+ #how to upgrade kubernetes master node
  252  kubectl get nodes
   253  kubectl drain ip-172-31-14-114
 
   255  kubectl drain ip-172-31-14-114 --ignore-daemonsets
   256  kubectl get nodes
+   258  apt-get update
+  259  kubectl get nodes
+  260  apt-cache show kubeadm | grep 1.24
+  261  apt-mark hold kubectl kubelet
+  262  apt-mark unhold kubeadm
+  263  kubeadm version
+  264  kubeadm upgrade plan
+
