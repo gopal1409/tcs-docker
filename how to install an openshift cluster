@@ -12,4 +12,10 @@
   290  cp kubectl /usr/bin
   291  eval "$(ssh-agent -s)"
   292  ssh-add /root/.ssh/id_rsa
+##########install aws cli tool
+294  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  295  unzip awscliv2.zip
+   297  apt install unzip
+  296  sudo ./aws/install
+  301  aws --version
 
