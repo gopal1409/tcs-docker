@@ -5,3 +5,11 @@
   283  ls
   284  wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux.tar.gz
   286  tar zxvf openshift-client-linux.tar.gz
+  
+  ######add openshift requirements
+  288  ssh-keygen -t rsa
+  289  cp oc /usr/bin
+  290  cp kubectl /usr/bin
+  291  eval "$(ssh-agent -s)"
+  292  ssh-add /root/.ssh/id_rsa
+
