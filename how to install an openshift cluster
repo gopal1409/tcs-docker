@@ -20,4 +20,4 @@
   301  aws --version
   
   ###########configure aws region
-
+  aws configure
