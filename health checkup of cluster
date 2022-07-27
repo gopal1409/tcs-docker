@@ -9,4 +9,13 @@
   314  oc adm top nodes
 ########container engine logs for your master node
  316  oc adm node-logs --role=master -u crio
+####oc cluster toruble shoot
+ 318  oc get daemonsets -n openshift-sdn
+  319  oc get pods -n openshift-sdn
+  320  oc logs sdn-bkxf6 -n openshift-sdn
+  321  oc get network.config.openshift.io cluster -o yaml
+  322  oc get pods -n openshift-network-operator
+  323  oc adm node-logs --role=master -u kubelet
+  324  oc adm node-logs --role=master 0u crio
+  325  oc adm node-logs --role=master -u crio
 
