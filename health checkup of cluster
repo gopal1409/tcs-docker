@@ -1,2 +1,7 @@
   303  kubectl get nodes
   304  oc adm node-logs ip-10-0-138-81.ca-central-1.compute.internal -u crio
+    307  oc get clusterversion
+  308  oc get clusteroperators.config.openshift.io
+  309  oc describe clusterversion
+  310  oc adm upgrade
+
