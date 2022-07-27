@@ -7,4 +7,6 @@
 #####node wise utilization report
 313  oc get nodes
   314  oc adm top nodes
+########container engine logs for your master node
+ 316  oc adm node-logs --role=master -u crio
 
