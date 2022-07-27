@@ -16,6 +16,6 @@
   321  oc get network.config.openshift.io cluster -o yaml
   322  oc get pods -n openshift-network-operator
   323  oc adm node-logs --role=master -u kubelet
-  324  oc adm node-logs --role=master 0u crio
+
   325  oc adm node-logs --role=master -u crio
 
