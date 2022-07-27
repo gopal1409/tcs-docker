@@ -4,4 +4,7 @@
   308  oc get clusteroperators.config.openshift.io
   309  oc describe clusterversion
   310  oc adm upgrade
+#####node wise utilization report
+313  oc get nodes
+  314  oc adm top nodes
 
