@@ -1,0 +1,7 @@
+ 279  mkdir openshift
+  280  cd openshift/
+  281  wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-install-linux.tar.gz
+  282  tar zxvf openshift-install-linux.tar.gz
+  283  ls
+  284  wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux.tar.gz
+  286  tar zxvf openshift-client-linux.tar.gz
