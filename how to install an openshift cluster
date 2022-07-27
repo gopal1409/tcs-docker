@@ -21,3 +21,5 @@
   
   ###########configure aws region
   aws configure
+######create the configuration file for openshift
+ 306  ./openshift-install create install-config --dir test/ --log-level debug
