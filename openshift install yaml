@@ -1,0 +1,51 @@
+apiVersion: v1
+baseDomain: openshiftlabs.xyz
+compute:
+- architecture: amd64
+  hyperthreading: Enabled
+  name: worker
+  platform:
+    aws:
+      rootVolume:
+        iops: 200
+        size: 40
+        type: io1
+      type: t3a.xlarge
+      zones:
+      - ca-central-1a
+      - ca-central-1b
+  replicas: 2
+controlPlane:
+  architecture: amd64
+  hyperthreading: Enabled
+  name: master
+  platform:
+    aws:
+      zones:
+      - ca-central-1a
+      - ca-central-1b
+      rootVolume:
+        iops: 200
+        size: 40
+        type: io1
+      type: t3a.xlarge
+  replicas: 3
+metadata:
+  creationTimestamp: null
+  name: gopald
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  machineNetwork:
+  - cidr: 10.0.0.0/16
+  networkType: OpenShiftSDN
+  serviceNetwork:
+  - 172.30.0.0/16
+platform:
+  aws:
+    region: ca-central-1
+publish: External
+pullSecret: '{"auths":{"cloud.openshift.com":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K29jbV9hY2Nlc3NfYTUzOTFiNTIwZjNiNGZjNmIzMjBkMjg4ODYwNzI1ZWY6MjZRNEtUVDNCVEIxOEUyV0tRTzgzVzBLREc1TlAxT0NLTkJMQVdBMEJDMjlSVFE5MExPQzc5V1ZZSlhCTUgyOA==","email":"gopal.a.das@zmail.rll.in"},"quay.io":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K29jbV9hY2Nlc3NfYTUzOTFiNTIwZjNiNGZjNmIzMjBkMjg4ODYwNzI1ZWY6MjZRNEtUVDNCVEIxOEUyV0tRTzgzVzBLREc1TlAxT0NLTkJMQVdBMEJDMjlSVFE5MExPQzc5V1ZZSlhCTUgyOA==","email":"gopal.a.das@zmail.rll.in"},"registry.connect.redhat.com":{"auth":"fHVoYy1wb29sLWY0YjU5ZDI4LThlNmMtNGU0MS04NDY2LWIxMTBjZWY1YjAwODpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSmhOVGxpWVdRMFltRTVPRE0wTjJZME9HSTJaR0V6TVRoallUZ3lOR00zWmlKOS5ub19WVHBWNE9hLVVqMVZRcjV4UTJPYnJWRnM3XzdiZG1PV082MzNrMkZzMkxSNW01V19DS0o3a1hjRVdCTndqVmJ6S1MxZndxNUtkeGk0UkhhSmNDMzc4UThOZUg3SzhUdmgxRklkRll2bExKZWRaZXRXbk1aZVhfOEFGbWxSSzdWaDNRZnFvMkdSNWNjVkRmVE1id3FfdXJXb0F2dG5YUGk4b0huakc4bWRVT1ZYcmM3dWFDcnZDYjNkR1U2NVJmNUlIRHdxVkt3YjNtWlRwWXBEbHJjQkdYOU9UaUtaMkRna3FYRU9GdmJIYzNvbFhNTmF6bkdZa2VZLWx4QjZUQ2x1Z3dOZTV3a1VrY3ZkTHNQMTRBaDQwOXdoSTlVeGhiUHdpWVR4OFdSVmFnUUlpT1hTMnhnUGdKNTM4TUVrRnBMY3JuLUVEdG8wQVRyS0lSUEcwYmF0R1MtMlJ6Vjh0RTdxSjdrNjdycU9hSEtMb2VNRF9PQUJMbGh0aVA3UUk2X21SbHVEejU5NUpaVGh2NXpLeGdiX25MMHNJU3BTeGNKb0tMbUtWMFVEM2ZHYkFxenRaWWd2N1hlV0NXeUVXU3lnZS1SOWtRU3lMNWdrSWp6ZGtHdFp5Wlp3amVjS0swajlhQlNBUUFWNHNQVjZtdG9Kd3pPd2s2QTFWT3BVOXRsM1FhenBiZEhJV3FicHNGRUhjVnlrRmYwU203Z0ROdjBQQWZzeGN2d0M1Y0hncnM1WmRMQjdfMzgzbktSWW5WQ3RIVS04TEEtbUxsNk1hSEdWV0pjZGkzMTUyaTdwSXo3bjJFb19mdklyTkZrcW8xaHhGbmVURVZBdmY5MnBOdVpudFl4RFZtZEdlSEgzbGtXaVVwd0dXYUk1WktJQlRDOHdPaG9YNFMtSQ==","email":"gopal.a.das@zmail.rll.in"},"registry.redhat.io":{"auth":"fHVoYy1wb29sLWY0YjU5ZDI4LThlNmMtNGU0MS04NDY2LWIxMTBjZWY1YjAwODpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSmhOVGxpWVdRMFltRTVPRE0wTjJZME9HSTJaR0V6TVRoallUZ3lOR00zWmlKOS5ub19WVHBWNE9hLVVqMVZRcjV4UTJPYnJWRnM3XzdiZG1PV082MzNrMkZzMkxSNW01V19DS0o3a1hjRVdCTndqVmJ6S1MxZndxNUtkeGk0UkhhSmNDMzc4UThOZUg3SzhUdmgxRklkRll2bExKZWRaZXRXbk1aZVhfOEFGbWxSSzdWaDNRZnFvMkdSNWNjVkRmVE1id3FfdXJXb0F2dG5YUGk4b0huakc4bWRVT1ZYcmM3dWFDcnZDYjNkR1U2NVJmNUlIRHdxVkt3YjNtWlRwWXBEbHJjQkdYOU9UaUtaMkRna3FYRU9GdmJIYzNvbFhNTmF6bkdZa2VZLWx4QjZUQ2x1Z3dOZTV3a1VrY3ZkTHNQMTRBaDQwOXdoSTlVeGhiUHdpWVR4OFdSVmFnUUlpT1hTMnhnUGdKNTM4TUVrRnBMY3JuLUVEdG8wQVRyS0lSUEcwYmF0R1MtMlJ6Vjh0RTdxSjdrNjdycU9hSEtMb2VNRF9PQUJMbGh0aVA3UUk2X21SbHVEejU5NUpaVGh2NXpLeGdiX25MMHNJU3BTeGNKb0tMbUtWMFVEM2ZHYkFxenRaWWd2N1hlV0NXeUVXU3lnZS1SOWtRU3lMNWdrSWp6ZGtHdFp5Wlp3amVjS0swajlhQlNBUUFWNHNQVjZtdG9Kd3pPd2s2QTFWT3BVOXRsM1FhenBiZEhJV3FicHNGRUhjVnlrRmYwU203Z0ROdjBQQWZzeGN2d0M1Y0hncnM1WmRMQjdfMzgzbktSWW5WQ3RIVS04TEEtbUxsNk1hSEdWV0pjZGkzMTUyaTdwSXo3bjJFb19mdklyTkZrcW8xaHhGbmVURVZBdmY5MnBOdVpudFl4RFZtZEdlSEgzbGtXaVVwd0dXYUk1WktJQlRDOHdPaG9YNFMtSQ==","email":"gopal.a.das@zmail.rll.in"}}}'
+sshKey: |
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtbC81TmDoS7yo2mV6qIIJ4gjenprrKlfwuNN+xbefS3LI0239xLFB6z1iu/BU7TYTB13TABsxSZAeZuAn4LJ2Vek3oM7EeVoMn/Q2lEC75oG7w20OBeygMROXv65+I/ct/ZJKm1Cdac5czxnOtyZiFxy+NEIOCAlEUxFjiAp8CGqlH3NsL7VU4YO1gHSujy9+n0KjSbgUgcOCB4KqJ0UVF+opM/gvEHg4q2VmuBWWZyc598toq/J1o9Ub/WdPDqI04anzFMtIo3b3MFT1IzreW4yNmq0jiteN1l69C4++k+MX/2SM3NeEvajYnoVsAwe/MFzyim2EmaMChRXLfwKs/pDtA7Ebvk1YSxyUj7Nz8t5C+LtrAsaiL5ID3AvFDUlxzTo/ZWqRcrrAOuLp4/+v0NUKAhUq2Bj4zdMhLlE6yuv/SqKPJE43EeqFbWnRH6uyBQG04rOp9fqEtue7xjenPOEtH/0EO1kVNg6PwzD+AoJQ/phgh8WjKDtm6uOWqMc= root@ip-172-31-35-98
