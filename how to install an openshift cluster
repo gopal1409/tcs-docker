@@ -24,6 +24,7 @@
   aws configure
 ######create the configuration file for openshift
  306  ./openshift-install create install-config --dir test/ --log-level debug
+ ###once dry run terraform file is created we need to update the file with master and worker node vm configuration
  ####install openshift
  ./openshift-install create cluster --dir test/ --log-level debug
 
