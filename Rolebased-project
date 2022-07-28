@@ -5,3 +5,7 @@
  85  oc adm groups new mylocaadmins
 88  oc adm groups add-users mylocaadmins tom rosemarry
    89  oc adm policy add-cluster-role-to-group cluster-admin  mylocaadmins
+###role and attache the same with a user
+92  oc create role powview --verb=get --resource=pod -n jenkins
+   93  oc adm policy add-role-to-user powview tom --role-namespace=jenkins -n jenkins
+####verbs: get/create/delete
