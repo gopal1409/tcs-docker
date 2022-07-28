@@ -1,0 +1,3 @@
+ 74  oc new-project jenkins --description="this is my jenkins project" --display-name="jenkinsprj"
+   75  oc get project
+   76  oc get project jenkins
