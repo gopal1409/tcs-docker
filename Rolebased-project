@@ -1,3 +1,7 @@
  74  oc new-project jenkins --description="this is my jenkins project" --display-name="jenkinsprj"
    75  oc get project
    76  oc get project jenkins
+   ###add user and permissionm
+ 85  oc adm groups new mylocaadmins
+88  oc adm groups add-users mylocaadmins tom rosemarry
+   89  oc adm policy add-cluster-role-to-group cluster-admin  mylocaadmins
