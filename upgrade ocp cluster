@@ -1,0 +1,4 @@
+295  oc get clusterversion
+  296  oc adm upgrade
+  297  oc adm upgrade --to-latest=true
+  298  oc adm upgrade --to=version
