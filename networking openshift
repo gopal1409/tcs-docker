@@ -1,0 +1,4 @@
+  302  oc get endpoints
+  303  oc get route --all-namespaces
+  304  oc get service --all-namespaces
+  305  oc get hostsubnet
