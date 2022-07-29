@@ -1,0 +1,28 @@
+216  apt install default-jdk
+  217  apt instal maven
+ 230  git clone https://github.com/gustavoponce7/spring-login.git
+  231  cd spring-login/
+  232  mvn package
+234  mvn -B -DskipTests clean package
+ 240  touch build.sh
+  241  vi build.sh
+  (inside build.sh)
+  docker build -t loginsc .
+  242  vi start.sh
+(inside start.sh)
+docker run -it -p 8082:8080 loginsc
+245  rm -rf .git
+  246  git add .
+  247  git init
+  248  git add .
+  249  git commit -m "openshift builder image"
+###3get the ssh key
+ 251  cat /root/.ssh/id_rsa.pub
+ ####add the ssh key in github
+ ###create a new github repo
+ copy the git remote sshcomand
+ git push
+  252  git remote add origin git@github.com:gopal1409/openshift-builder.git
+  253  git push -u origin master
+###in openshift console
+ 255  oc new-build https://github.com/gopal1409/openshift-builder.git
