@@ -15,3 +15,8 @@
 wget localhost:8080
 cat index.html
 exit
+###deployment in openshift
+ 136  oc explain deploymentconfig
+ 
+  138  oc new-app docker.io/gopal1409/chatapp:v1 --as-deployment-config
+  139  oc status
