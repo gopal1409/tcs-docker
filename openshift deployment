@@ -2,3 +2,16 @@
 119  oc project
   121  oc new-project demo-project-gd
   122  oc project demo-project-gd
+###how to deploy your pod in openshift
+ 124  oc explain pod
+  125  oc explain pod.spec
+  126  git clone https://gitlab.com/practical-openshift/labs
+  127  ls
+  128  cd labs/
+  129  ls
+  130  oc create -f pods/pod.yaml
+  131  oc get pod
+  132  oc rsh hello-world-pod
+wget localhost:8080
+cat index.html
+exit
