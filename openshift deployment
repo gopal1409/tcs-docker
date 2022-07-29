@@ -36,5 +36,10 @@ exit
   #how to do autoscaling
    192  oc autoscale deployment/myapp-deployment --min=1 --max=2 --cpu-percent=75
   194  oc get hpa
+#######build config
+  197  oc new-build https://gitlab.com/practical-openshift/hello-world.git
+  198  oc get -o yaml buildconfig/hello-world
+  199  oc get build
+  200  oc get pod
 
 
