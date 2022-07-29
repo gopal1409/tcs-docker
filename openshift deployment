@@ -33,4 +33,8 @@ exit
   175  ls
   176  kubectl apply -f deployment.yml
   177  oc get deployment
+  #how to do autoscaling
+   192  oc autoscale deployment/myapp-deployment --min=1 --max=2 --cpu-percent=75
+  194  oc get hpa
+
 
