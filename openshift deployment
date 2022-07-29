@@ -41,5 +41,12 @@ exit
   198  oc get -o yaml buildconfig/hello-world
   199  oc get build
   200  oc get pod
+  
+  ########oc build with spring app
+  203  oc new-build https://github.com/gopal1409/springboot-chat-app.git
+
+  205  oc get build
+  oc get pod
+
 
 
