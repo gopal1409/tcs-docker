@@ -3,3 +3,11 @@
   263  oc get nodes --show-labels
  268  oc patch dc/chatapp --patch '{"spec":{"template":{"spec":{"nodeSelector":{"env":"dev"}}}}}'
   269  kubectl get pod
+###if you want an project need worker node
+ 268  oc patch dc/chatapp --patch '{"spec":{"template":{"spec":{"nodeSelector":{"env":"dev"}}}}}'
+  269  kubectl get pod
+  270  history
+  271  oc adm new-project demo-gd-lable --node-selector "env=dev"
+  272  oc annotate namespace demo-project-gd openshift.io/node-selector="env=dev" --overwrite
+  273  history
+  274  oc project demo-project-gd
