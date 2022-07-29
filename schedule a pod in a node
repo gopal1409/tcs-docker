@@ -1,0 +1,5 @@
+ 261  oc label node ip-10-0-190-250.ca-central-1.compute.internal env=dev
+  262  oc get nodes -o wide
+  263  oc get nodes --show-labels
+ 268  oc patch dc/chatapp --patch '{"spec":{"template":{"spec":{"nodeSelector":{"env":"dev"}}}}}'
+  269  kubectl get pod
