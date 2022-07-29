@@ -2,3 +2,10 @@
   303  oc get route --all-namespaces
   304  oc get service --all-namespaces
   305  oc get hostsubnet
+  ###network operator
+    308  oc get -n openshift-network-operator deployment/network-operator
+  309  oc get clusteroperator/network
+  310  oc describe network.config/cluster
+  311  oc describe clusteroperator/network
+  312  oc logs --namespace=openshift-network-operator deployment/network-operator
+
