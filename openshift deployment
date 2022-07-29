@@ -1,0 +1,4 @@
+###project are like namespace in openshift. 
+119  oc project
+  121  oc new-project demo-project-gd
+  122  oc project demo-project-gd
