@@ -26,4 +26,11 @@ exit
 
   161  oc adm top pods -n openshift-console
   162  oc logs -f chatapp-2-67jcg
+  
+  ####in place of oc you can use kubectl
+   173  git clone https://github.com/gopal1409/dxckubemanifest.git
+  174  cd dxckubemanifest/
+  175  ls
+  176  kubectl apply -f deployment.yml
+  177  oc get deployment
 
