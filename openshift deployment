@@ -20,3 +20,10 @@ exit
  
   138  oc new-app docker.io/gopal1409/chatapp:v1 --as-deployment-config
   139  oc status
+  ######check the logs of a pod
+   158  oc get pod -o wide
+  159  oc adm top pods
+
+  161  oc adm top pods -n openshift-console
+  162  oc logs -f chatapp-2-67jcg
+
